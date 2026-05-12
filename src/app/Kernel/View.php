@@ -21,5 +21,23 @@ class View {
 
         return self::$smarty;
     }
+    public static function render(string $template, array $data = [], int $code = 200): void
+    {
+        http_response_code($code);
+
+        $smarty = self::get();
+
+        foreach ($data as $key => $value) {
+            $smarty->assign($key, $value);
+        }
+
+        $smarty->display($template);
+        exit;
+    }
+
+    public static function error(int $code = 404): void
+    {
+        self::render("errors/{$code}.tpl", [], $code);
+    }
 }
 ?>

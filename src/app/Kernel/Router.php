@@ -1,6 +1,6 @@
 <?php 
 namespace App\Kernel;
-
+use App\Kernel\View;
 class Router
 {
     private array $routes = [];
@@ -23,7 +23,7 @@ class Router
 
         if (!$action) {
             http_response_code(404);
-            die('404 Not Found');
+            View::error();
         }
 
         [$controller, $method] = explode('@', $action);
