@@ -1,26 +1,28 @@
 <?php
-/* Smarty version 5.8.0, created on 2026-05-13 05:24:17
+/* Smarty version 5.8.0, created on 2026-05-13 05:49:54
   from 'file:index.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.8.0',
-  'unifunc' => 'content_6a040b01378db3_95965388',
+  'unifunc' => 'content_6a041102905215_13703760',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '94ad261647aa7bfeb6835379e098cb3d84cfcba3' => 
     array (
       0 => 'index.tpl',
-      1 => 1778649856,
+      1 => 1778651377,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:components/hero_section.tpl' => 1,
+    'file:components/article.tpl' => 3,
   ),
 ))) {
-function content_6a040b01378db3_95965388 (\Smarty\Template $_smarty_tpl) {
+function content_6a041102905215_13703760 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, true);
 ?>
@@ -30,30 +32,24 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_8809236166a040b013784c3_07078772', "content");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_16577590156a041102902f62_27202900', "content");
 $_smarty_tpl->getInheritance()->endChild($_smarty_tpl, "layouts/main.tpl", $_smarty_current_dir);
 }
 /* {block "content"} */
-class Block_8809236166a040b013784c3_07078772 extends \Smarty\Runtime\Block
+class Block_16577590156a041102902f62_27202900 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates';
 ?>
 
 
-<section class="max-w-7xl mx-auto px-6 py-20">
-    <h1 class="text-5xl font-bold mb-6">
-        Добро пожаловать в DevBlog
-    </h1>
 
-    <p class="text-xl text-gray-600">
-        Блог о современной веб-разработке.
-    </p>
-</section>
+<?php $_smarty_tpl->renderSubTemplate("file:components/hero_section.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('heading'=>"Добро пожаловать в DevBlog",'text'=>"Блог о современной веб-разработке."), (int) 0, $_smarty_current_dir);
+?>
 
 
 
-  <!-- CATEGORY -->
+<!-- CATEGORY -->
 <section class="mb-16">
 
     <div class="flex items-center justify-between mb-8">
@@ -76,124 +72,16 @@ $_smarty_current_dir = '/var/www/html/templates';
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- POST -->
-        <article class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition">
-            <img src="https://picsum.photos/600/400?1"
-                class="w-full h-52 object-cover">
+        <?php $_smarty_tpl->renderSubTemplate("file:components/article.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('post'=>''), (int) 0, $_smarty_current_dir);
+?>
 
-                <div class="p-6">
+        <?php $_smarty_tpl->renderSubTemplate("file:components/article.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('post'=>''), (int) 0, $_smarty_current_dir);
+?>
+         <?php $_smarty_tpl->renderSubTemplate("file:components/article.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('post'=>''), (int) 0, $_smarty_current_dir);
+?>
 
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
-                            Laravel
-                        </span>
-
-                        <span class="text-sm text-gray-500">
-                            12.05.2026
-                        </span>
-                    </div>
-
-                    <h3 class="text-2xl font-bold mb-4">
-                        Laravel Routing
-                    </h3>
-
-                    <p class="text-gray-600 mb-6">
-                        Разбираем маршрутизацию и роуты в Laravel.
-                    </p>
-
-                    <div class="flex items-center justify-between">
-                        <span class="text-gray-500 text-sm">
-                            👁 1450 просмотров
-                        </span>
-
-                        <a href="#"
-                           class="text-blue-600 font-semibold hover:underline">
-                            Читать →
-                        </a>
-                    </div>
-
-                </div>
-            </article>
-
-            <!-- POST -->
-            <article class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition">
-                <img src="https://picsum.photos/600/400?2"
-                     class="w-full h-52 object-cover">
-
-                <div class="p-6">
-
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
-                            Laravel
-                        </span>
-
-                        <span class="text-sm text-gray-500">
-                            10.05.2026
-                        </span>
-                    </div>
-
-                    <h3 class="text-2xl font-bold mb-4">
-                        Laravel Controllers
-                    </h3>
-
-                    <p class="text-gray-600 mb-6">
-                        Как правильно организовать контроллеры.
-                    </p>
-
-                    <div class="flex items-center justify-between">
-                        <span class="text-gray-500 text-sm">
-                            👁 982 просмотров
-                        </span>
-
-                        <a href="#"
-                           class="text-blue-600 font-semibold hover:underline">
-                            Читать →
-                        </a>
-                    </div>
-
-                </div>
-            </article>
-
-            <!-- POST -->
-            <article class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition">
-                <img src="https://picsum.photos/600/400?3"
-                     class="w-full h-52 object-cover">
-
-                <div class="p-6">
-
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
-                            Laravel
-                        </span>
-
-                        <span class="text-sm text-gray-500">
-                            08.05.2026
-                        </span>
-                    </div>
-
-                    <h3 class="text-2xl font-bold mb-4">
-                        Laravel Middleware
-                    </h3>
-
-                    <p class="text-gray-600 mb-6">
-                        Работа с middleware в Laravel приложениях.
-                    </p>
-
-                    <div class="flex items-center justify-between">
-                        <span class="text-gray-500 text-sm">
-                            👁 641 просмотров
-                        </span>
-
-                        <a href="#"
-                           class="text-blue-600 font-semibold hover:underline">
-                            Читать →
-                        </a>
-                    </div>
-
-                </div>
-            </article>
-
-        </div>
-    </section>
+    </div>
+</section>
 
 <?php
 }

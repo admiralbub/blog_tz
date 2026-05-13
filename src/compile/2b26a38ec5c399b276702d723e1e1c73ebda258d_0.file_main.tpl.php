@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.8.0, created on 2026-05-13 05:34:45
+/* Smarty version 5.8.0, created on 2026-05-13 05:46:28
   from 'file:layouts/main.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.8.0',
-  'unifunc' => 'content_6a040d7514fd25_54965361',
+  'unifunc' => 'content_6a0410342b4425_74037385',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b26a38ec5c399b276702d723e1e1c73ebda258d' => 
     array (
       0 => 'layouts/main.tpl',
-      1 => 1778650483,
+      1 => 1778651186,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a040d7514fd25_54965361 (\Smarty\Template $_smarty_tpl) {
+function content_6a0410342b4425_74037385 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates/layouts';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
 ?>
@@ -55,150 +55,20 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
     </header>
     <main class="container mx-auto px-4 py-12">
         <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_14441992136a040d7514ef28_15317286', "content");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_20898434236a0410342b3c41_62476887', "content");
 ?>
 
     </main>
     <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white mt-20">
-        <div class="max-w-7xl mx-auto px-6 py-16">
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-
-                <!-- LOGO -->
-                <div>
-                    <h2 class="text-3xl font-bold mb-4">
-                        DevBlog
-                    </h2>
-
-                    <p class="text-gray-400 leading-relaxed">
-                        Блог о Laravel, PHP, Frontend разработке и современной архитектуре веб-приложений.
-                    </p>
-                </div>
-
-                <!-- NAVIGATION -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-5">
-                        Навигация
-                    </h3>
-
-                    <ul class="space-y-3 text-gray-400">
-                        <li>
-                            <a href="#" class="hover:text-white transition">
-                                Главная
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-white transition">
-                                Категории
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-white transition">
-                                Статьи
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-white transition">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- CATEGORIES -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-5">
-                        Категории
-                    </h3>
-
-                    <ul class="space-y-3 text-gray-400">
-                        <li>
-                            <a href="#" class="hover:text-white transition">
-                                Laravel
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-white transition">
-                                PHP
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-white transition">
-                                Frontend
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="hover:text-white transition">
-                                DevOps
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- SUBSCRIBE -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-5">
-                        Подписка
-                    </h3>
-
-                    <p class="text-gray-400 mb-4">
-                        Получайте новые статьи на email.
-                    </p>
-
-                    <form class="space-y-4">
-                        <input
-                            type="email"
-                            placeholder="Ваш email"
-                            class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white outline-none focus:border-blue-500"
-                        >
-
-                        <button
-                            type="submit"
-                            class="w-full bg-blue-600 hover:bg-blue-700 transition px-5 py-3 rounded-xl font-semibold"
-                        >
-                            Подписаться
-                        </button>
-                    </form>
-                </div>
-
-            </div>
-
-            <!-- BOTTOM -->
-            <div class="border-t border-gray-800 mt-14 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-
-                <p class="text-gray-500 text-sm">
-                    © 2026 DevBlog. Все права защищены.
-                </p>
-
-                <div class="flex items-center gap-5 text-gray-400 text-sm">
-                    <a href="#" class="hover:text-white transition">
-                        Privacy Policy
-                    </a>
-
-                    <a href="#" class="hover:text-white transition">
-                        Terms
-                    </a>
-
-                    <a href="#" class="hover:text-white transition">
-                        GitHub
-                    </a>
-                </div>
-
-            </div>
-
+    <footer class="bg-white border-t mt-16">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-500">
+            © 2026 MyBlog. Все права защищены.
         </div>
     </footer>
 </body>
 </html><?php }
 /* {block "content"} */
-class Block_14441992136a040d7514ef28_15317286 extends \Smarty\Runtime\Block
+class Block_20898434236a0410342b3c41_62476887 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates/layouts';

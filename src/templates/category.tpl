@@ -19,73 +19,15 @@
     <!-- POSTS -->
     <div class="space-y-8">
 
-        <!-- POST -->
-        <article class="bg-white rounded-2xl shadow-sm overflow-hidden md:flex">
-
-            <img src="https://picsum.photos/500/350?1"
-                 class="w-full md:w-80 h-64 object-cover">
-
-            <div class="p-6 flex flex-col justify-between">
-
-                <div>
-
-                    <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
-                        <span>12.05.2026</span>
-                        <span>👁 1450 просмотров</span>
-                    </div>
-
-                    <h3 class="text-3xl font-bold mb-4">
-                        Laravel Routing
-                    </h3>
-
-                    <p class="text-gray-600 mb-6">
-                        Подробный разбор маршрутизации и роутов в Laravel.
-                    </p>
-
-                </div>
-
-                <a href="#"
-                   class="text-blue-600 font-semibold hover:underline">
-                    Читать статью →
-                </a>
-
-            </div>
-
-        </article>
-
-        <!-- POST -->
-        <article class="bg-white rounded-2xl shadow-sm overflow-hidden md:flex">
-
-            <img src="https://picsum.photos/500/350?2"
-                 class="w-full md:w-80 h-64 object-cover">
-
-            <div class="p-6 flex flex-col justify-between">
-
-                <div>
-
-                    <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
-                        <span>10.05.2026</span>
-                        <span>👁 982 просмотров</span>
-                    </div>
-
-                    <h3 class="text-3xl font-bold mb-4">
-                        Laravel Controllers
-                    </h3>
-
-                    <p class="text-gray-600 mb-6">
-                        Как организовать архитектуру контроллеров.
-                    </p>
-
-                </div>
-
-                <a href="#"
-                   class="text-blue-600 font-semibold hover:underline">
-                    Читать статью →
-                </a>
-
-            </div>
-
-        </article>
+       {include file="components/article.tpl"
+            post=""
+        }
+        {include file="components/article.tpl"
+            post=""
+        }
+        {include file="components/article.tpl"
+            post=""
+        }
 
     </div>
 
