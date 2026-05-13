@@ -11,9 +11,12 @@
 <body class="bg-gray-100 text-gray-900">
 
     <!-- HEADER -->
-    <header class="bg-white border-b sticky top-0 z-50">
+    <header class="bg-white  sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <h1 class="text-2xl font-bold">DevBlog</h1>
+            <a href="/">
+                <span class="text-2xl font-bold">DevBlog</span>
+            </a>
+            
 
             <nav class="hidden md:flex items-center gap-6">
                 <a href="#" class="hover:text-blue-600">Главная</a>
@@ -21,9 +24,7 @@
                 <a href="#" class="hover:text-blue-600">Контакты</a>
             </nav>
 
-            <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl">
-                Подписаться
-            </button>
+            
         </div>
     </header>
     <main class="container mx-auto px-4 py-12">

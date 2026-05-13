@@ -14,26 +14,46 @@ class Router
     {
         $this->routes['POST'][$uri] = $action;
     }
-
-    public function dispatch($uri, $method)
+    private function notFound404(): void
     {
-        $uri = parse_url($uri, PHP_URL_PATH);
+        View::error();
+    }
 
-        $action = $this->routes[$method][$uri] ?? null;
+    public function dispatch($uri, $httpMethod)
+    {
+        $uri = trim(parse_url($uri, PHP_URL_PATH), '/');
 
-        if (!$action) {
-            http_response_code(404);
-            View::error();
+        $routes = $this->routes[$httpMethod] ?? [];
+
+        foreach ($routes as $route => $action) {
+
+      
+            $route = trim($route, '/');
+
+            $pattern = preg_replace('#\{[a-zA-Z_]+\}#', '([^/]+)', $route);
+
+            $pattern = "#^$pattern$#";
+
+            if (preg_match($pattern, $uri, $matches)) {
+
+                array_shift($matches);
+
+                [$controller, $method] = explode('@', $action);
+
+                $controllerClass = "App\\Controllers\\$controller";
+
+                $controllerObject = new $controllerClass();
+
+                return call_user_func_array(
+                    [$controllerObject, $method],
+                    $matches
+                );
+            }
         }
 
-        [$controller, $method] = explode('@', $action);
-
-        $controllerClass = "App\\Controllers\\$controller";
-
-        $controllerObject = new $controllerClass();
-
-        call_user_func([$controllerObject, $method]);
+        $this->notFound404();
     }
+
 }
 
 ?>

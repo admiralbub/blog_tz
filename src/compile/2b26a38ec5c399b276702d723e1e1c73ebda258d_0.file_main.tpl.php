@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.8.0, created on 2026-05-13 05:46:28
+/* Smarty version 5.8.0, created on 2026-05-13 05:58:22
   from 'file:layouts/main.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.8.0',
-  'unifunc' => 'content_6a0410342b4425_74037385',
+  'unifunc' => 'content_6a0412fe5f8347_08617892',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b26a38ec5c399b276702d723e1e1c73ebda258d' => 
     array (
       0 => 'layouts/main.tpl',
-      1 => 1778651186,
+      1 => 1778651901,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a0410342b4425_74037385 (\Smarty\Template $_smarty_tpl) {
+function content_6a0412fe5f8347_08617892 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates/layouts';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
 ?>
@@ -38,9 +38,12 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
 <body class="bg-gray-100 text-gray-900">
 
     <!-- HEADER -->
-    <header class="bg-white border-b sticky top-0 z-50">
+    <header class="bg-white  sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <h1 class="text-2xl font-bold">DevBlog</h1>
+            <a href="/">
+                <span class="text-2xl font-bold">DevBlog</span>
+            </a>
+            
 
             <nav class="hidden md:flex items-center gap-6">
                 <a href="#" class="hover:text-blue-600">Главная</a>
@@ -48,14 +51,12 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
                 <a href="#" class="hover:text-blue-600">Контакты</a>
             </nav>
 
-            <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl">
-                Подписаться
-            </button>
+            
         </div>
     </header>
     <main class="container mx-auto px-4 py-12">
         <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_20898434236a0410342b3c41_62476887', "content");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_5678604416a0412fe5f6921_63225162', "content");
 ?>
 
     </main>
@@ -68,7 +69,7 @@ $_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_20898434236a0
 </body>
 </html><?php }
 /* {block "content"} */
-class Block_20898434236a0410342b3c41_62476887 extends \Smarty\Runtime\Block
+class Block_5678604416a0412fe5f6921_63225162 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates/layouts';

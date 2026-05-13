@@ -8,7 +8,7 @@ use App\Kernel\Router;
 
 $router = new Router();
 
-require_once APP_PATH . '/routes.php';
+require_once APP_PATH . '/web/routes.php';
 require_once APP_PATH . '/app/helpers.php';
 
 
