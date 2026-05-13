@@ -8,11 +8,11 @@ class HomeController extends Controller
   
     public function index()
     {
-        $table = $this->db()->get('catagories');
-        dd($table);
+        $categories = $this->db()->get('categories');
         $this->view('index', [
             'title' => 'Главная страница',
-            'name' => 'Артем'
+            'name' => 'Артем',
+            'categories'=>$categories
         ]);
     }
 

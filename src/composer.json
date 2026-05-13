@@ -8,6 +8,7 @@
         }
     },
     "require": {
-        "smarty/smarty": "^5.8"
+        "smarty/smarty": "^5.8",
+        "fakerphp/faker": "^1.24"
     }
 }
