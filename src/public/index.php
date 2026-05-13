@@ -3,18 +3,13 @@
 define('APP_PATH', dirname(__DIR__));
 
 require_once APP_PATH . '/vendor/autoload.php';
-use App\Kernel\Router;
 
-
-$router = new Router();
-
-require_once APP_PATH . '/web/routes.php';
 require_once APP_PATH . '/app/helpers.php';
 
+use App\Kernel\App;
+
+$app = new App();
+$app->run();
 
 
-$router->dispatch(
-    $_SERVER['REQUEST_URI'],
-    $_SERVER['REQUEST_METHOD']
-);
 ?>

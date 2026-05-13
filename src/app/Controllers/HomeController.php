@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Controllers;
+use App\Kernel\Controller\Controller;
 
-
-class HomeController
+class HomeController extends Controller
 {
     public function index()
     {
-        view('index', [
+        $this->view('index', [
             'title' => 'Главная страница',
             'name' => 'Артем'
         ]);

@@ -1,7 +1,7 @@
 <?php
-use App\Kernel\View;
+use App\Kernel\View\View;
 
-function view($template, $data = [])
+/*function view($template, $data = [])
 {
     $smarty = View::get();
     foreach ($data as $key => $value) {
@@ -9,5 +9,5 @@ function view($template, $data = [])
     }
 
     $smarty->display($template . '.tpl');
-}
+}*/
 

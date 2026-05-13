@@ -1,7 +1,7 @@
 <?php
-namespace App\Kernel;
+namespace App\Kernel\View;
 use Smarty\Smarty;
-class View {
+class View implements ViewInterface {
     private static ?Smarty $smarty = null;
 
     public static function get(): Smarty
@@ -34,7 +34,15 @@ class View {
         $smarty->display($template);
         exit;
     }
+    public function page($template, $data = [])
+    {
+        $smarty =$this->get();
+        foreach ($data as $key => $value) {
+            $smarty->assign($key, $value);
+        }
 
+        $smarty->display($template . '.tpl');
+    }
     public static function error(int $code = 404): void
     {
         self::render("errors/{$code}.tpl", [], $code);
