@@ -1,7 +1,7 @@
 <?php
 return [
     'driver' => 'mysql',
-    'host' => 'database',
+    'host' => 'mysql',
     'port' => 3306,
     'database' => 'blog',
     'username' => 'helsi',

@@ -2,10 +2,29 @@
 namespace App\Kernel\Router;
 
 use App\Kernel\View\View;
+use App\Kernel\View\ViewInterface;
+
+use App\Kernel\Database\Database;
+use App\Kernel\Database\DatabaseInterface;
+
+use App\Kernel\Config\Config;
 
 class Router implements RouterInterface
 {
     private array $routes = [];
+
+    private ViewInterface $view;
+
+    private DatabaseInterface $database;
+
+    public function __construct()
+    {
+        $config = new Config();
+
+        $this->view = new View();
+
+        $this->database = new Database($config);
+    }
 
     public function get(string $uri, string $action): void
     {
@@ -32,9 +51,13 @@ class Router implements RouterInterface
 
             $route = trim($route, '/');
 
-            $pattern = preg_replace('#\{[a-zA-Z_]+\}#', '([^/]+)', $route);
+            $pattern = preg_replace(
+                '#\{[a-zA-Z_]+\}#',
+                '([^/]+)',
+                $route
+            );
 
-            $pattern = "#^$pattern$#";
+            $pattern = "#^{$pattern}$#";
 
             if (preg_match($pattern, $uri, $matches)) {
 
@@ -42,10 +65,14 @@ class Router implements RouterInterface
 
                 [$controller, $method] = explode('@', $action);
 
-                $controllerClass = "App\\Controllers\\$controller";
+                $controllerClass = "App\\Controllers\\{$controller}";
 
                 $controllerObject = new $controllerClass();
-                
+
+                $controllerObject->setView($this->view);
+
+                $controllerObject->setDatabase($this->database);
+
                 return call_user_func_array(
                     [$controllerObject, $method],
                     $matches
