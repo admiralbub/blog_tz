@@ -13,4 +13,14 @@ interface DatabaseInterface
     public function delete(string $table, array $conditions = []): void;
 
     public function update(string $table, array $data, array $conditions = []): void;
+    public function query(string $sql, array $params = []): array;
+    public function getRelated(
+        string $table,
+        string $pivotTable,
+        string $foreignKey,
+        string $relatedKey,
+        int $id,
+        array $order = [],
+        int $limit = -1
+    ): array;
 }

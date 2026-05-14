@@ -10,6 +10,51 @@ class Database implements DatabaseInterface {
     ) {
         $this->connect();
     }
+
+    public function getRelated(
+        string $table,
+        string $pivotTable,
+        string $foreignKey,
+        string $relatedKey,
+        int $id,
+        array $order = [],
+        int $limit = -1
+    ): array {
+    
+        $sql = "
+            SELECT {$table}.*
+            FROM {$table}
+    
+            INNER JOIN {$pivotTable}
+                ON {$table}.id = {$pivotTable}.{$foreignKey}
+    
+            WHERE {$pivotTable}.{$relatedKey} = :id
+        ";
+    
+        if (count($order) > 0) {
+    
+            $sql .= ' ORDER BY '.implode(
+                ', ',
+                array_map(
+                    fn ($field, $direction) => "$field $direction",
+                    array_keys($order),
+                    $order
+                )
+            );
+        }
+    
+        if ($limit > 0) {
+            $sql .= " LIMIT {$limit}";
+        }
+    
+        $stmt = $this->pdo->prepare($sql);
+    
+        $stmt->execute([
+            'id' => $id
+        ]);
+    
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
     public function insert(string $table, array $data): int|false {
         $fields = array_keys($data);
 
@@ -28,7 +73,7 @@ class Database implements DatabaseInterface {
 
         return (int) $this->pdo->lastInsertId();
     }
-
+    
     public function first(string $table, array $conditions = []): ?array {
         $where = '';
 
@@ -121,6 +166,14 @@ class Database implements DatabaseInterface {
         } catch (\PDOException $exception) {
             exit("Database connection failed: {$exception->getMessage()}");
         }
+    }
+    public function query(string $sql, array $params = []): array
+    {
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->execute($params);
+
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 }
 ?>

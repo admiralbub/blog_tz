@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.8.0, created on 2026-05-13 05:49:24
+/* Smarty version 5.8.0, created on 2026-05-14 05:37:28
   from 'file:components/article.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.8.0',
-  'unifunc' => 'content_6a0410e44cb865_07909981',
+  'unifunc' => 'content_6a055f981a16e0_15751224',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '704e3d24f0a7adddadd55871a293ae80e75eb681' => 
     array (
       0 => 'components/article.tpl',
-      1 => 1778651311,
+      1 => 1778737046,
       2 => 'file',
     ),
   ),
@@ -20,40 +20,49 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a0410e44cb865_07909981 (\Smarty\Template $_smarty_tpl) {
+function content_6a055f981a16e0_15751224 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates/components';
 ?><article class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition">
-    <img src="https://picsum.photos/600/400?1"
-    class="w-full h-52 object-cover">
-
+    <a href="/article/<?php echo $_smarty_tpl->getValue('article')['id'];?>
+">
+        <img src="<?php echo $_smarty_tpl->getValue('article')['image'];?>
+"
+        class="w-full h-52 object-cover">
+    </a>
     <div class="p-6">
 
         <div class="flex items-center justify-between mb-4">
-            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
-                Laravel
-            </span>
+            
 
             <span class="text-sm text-gray-500">
-                12.05.2026
+                <?php echo $_smarty_tpl->getValue('article')['created_at'];?>
+
             </span>
         </div>
 
         <h3 class="text-2xl font-bold mb-4">
-            Laravel Routing
+            <a href="/article/<?php echo $_smarty_tpl->getValue('article')['id'];?>
+">
+                <?php echo $_smarty_tpl->getValue('article')['title'];?>
+
+            </a>
         </h3>
 
         <p class="text-gray-600 mb-6">
-            Разбираем маршрутизацию и роуты в Laravel.
+            <?php echo $_smarty_tpl->getValue('article')['short_description'];?>
+
         </p>
 
         <div class="flex items-center justify-between">
             <span class="text-gray-500 text-sm">
-                👁 1450 просмотров
+                👁 <?php echo $_smarty_tpl->getValue('article')['views'];?>
+ View
             </span>
 
-            <a href="#"
+            <a href="/article/<?php echo $_smarty_tpl->getValue('article')['id'];?>
+"
                 class="text-blue-600 font-semibold hover:underline">
-                Читать →
+                Read →
             </a>
         </div>
 

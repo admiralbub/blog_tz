@@ -1,35 +1,36 @@
 <article class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition">
-    <img src="https://picsum.photos/600/400?1"
-    class="w-full h-52 object-cover">
-
+    <a href="/article/{$article.id}">
+        <img src="{$article.image}"
+        class="w-full h-52 object-cover">
+    </a>
     <div class="p-6">
 
         <div class="flex items-center justify-between mb-4">
-            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
-                Laravel
-            </span>
+            
 
             <span class="text-sm text-gray-500">
-                12.05.2026
+                {$article.created_at}
             </span>
         </div>
 
         <h3 class="text-2xl font-bold mb-4">
-            Laravel Routing
+            <a href="/article/{$article.id}">
+                {$article.title}
+            </a>
         </h3>
 
         <p class="text-gray-600 mb-6">
-            Разбираем маршрутизацию и роуты в Laravel.
+            {$article.short_description}
         </p>
 
         <div class="flex items-center justify-between">
             <span class="text-gray-500 text-sm">
-                👁 1450 просмотров
+                👁 {$article.views} View
             </span>
 
-            <a href="#"
+            <a href="/article/{$article.id}"
                 class="text-blue-600 font-semibold hover:underline">
-                Читать →
+                Read →
             </a>
         </div>
 

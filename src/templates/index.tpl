@@ -12,42 +12,39 @@
 }
 
 
+{foreach $categories as $category}
+    <!-- CATEGORY -->
+    <section class="mb-16">
 
-<!-- CATEGORY -->
-<section class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <h2 class="text-4xl font-bold">
+                    {$category.name}
+                </h2>
 
-    <div class="flex items-center justify-between mb-8">
-        <div>
-            <h2 class="text-4xl font-bold">
-                Laravel
-            </h2>
+                <p class="text-gray-600 mt-2">
+                    {$category.description}
+                </p>
+            </div>
 
-            <p class="text-gray-600 mt-2">
-                Последние статьи по Laravel
-            </p>
+            <a href="#"
+                class="bg-blue-600 text-white px-5 py-3 rounded-xl hover:bg-blue-700 transition">
+                Все статьи
+            </a>
         </div>
+        
+        {if $category.articles}
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {foreach $category.articles as $article}
+                    <!-- POST -->
+                    {include file="components/article.tpl"
+                        article=$article
+                    }
+                 {/foreach}
+                
 
-        <a href="#"
-            class="bg-blue-600 text-white px-5 py-3 rounded-xl hover:bg-blue-700 transition">
-            Все статьи
-        </a>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- POST -->
-        {include file="components/article.tpl"
-            post=""
-        }
-
-        {include file="components/article.tpl"
-            post=""
-        }
-         {include file="components/article.tpl"
-            post=""
-        }
-
-    </div>
-</section>
-
+            </div>
+        {/if}
+    </section>
+{/foreach}
 {/block}
