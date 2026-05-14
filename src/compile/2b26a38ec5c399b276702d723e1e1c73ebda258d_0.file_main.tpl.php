@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.8.0, created on 2026-05-13 05:58:22
+/* Smarty version 5.8.0, created on 2026-05-14 05:55:57
   from 'file:layouts/main.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.8.0',
-  'unifunc' => 'content_6a0412fe5f8347_08617892',
+  'unifunc' => 'content_6a0563ed4b4bf8_83255421',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b26a38ec5c399b276702d723e1e1c73ebda258d' => 
     array (
       0 => 'layouts/main.tpl',
-      1 => 1778651901,
+      1 => 1778738155,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a0412fe5f8347_08617892 (\Smarty\Template $_smarty_tpl) {
+function content_6a0563ed4b4bf8_83255421 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates/layouts';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
 ?>
@@ -45,31 +45,27 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
             </a>
             
 
-            <nav class="hidden md:flex items-center gap-6">
-                <a href="#" class="hover:text-blue-600">Главная</a>
-                <a href="#" class="hover:text-blue-600">Категории</a>
-                <a href="#" class="hover:text-blue-600">Контакты</a>
-            </nav>
+           
 
             
         </div>
     </header>
     <main class="container mx-auto px-4 py-12">
         <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_5678604416a0412fe5f6921_63225162', "content");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_19090988246a0563ed4b4046_05045826', "content");
 ?>
 
     </main>
     <!-- FOOTER -->
     <footer class="bg-white border-t mt-16">
         <div class="container mx-auto px-4 py-6 text-center text-gray-500">
-            © 2026 MyBlog. Все права защищены.
+            © 2026 MyBlog. All rights reserved.
         </div>
     </footer>
 </body>
 </html><?php }
 /* {block "content"} */
-class Block_5678604416a0412fe5f6921_63225162 extends \Smarty\Runtime\Block
+class Block_19090988246a0563ed4b4046_05045826 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates/layouts';

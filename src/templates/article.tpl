@@ -1,4 +1,4 @@
-{assign var="meta_title" value="{$article.title}"}
+{assign var="meta_title" value="Category"}
 {extends file="layouts/main.tpl"}
 
 {block name="content"}
@@ -16,8 +16,13 @@
                 <!-- META -->
                 <div class="flex flex-wrap items-center gap-4 mb-6 text-sm">
 
-              
-
+                   
+                    {foreach $article.categories as $category}
+                       
+                         <span class="bg-blue-100 text-blue-600 px-4 py-1 rounded-full">
+                            {$category.name}
+                        </span>
+                    {/foreach}
                     <span class="text-gray-500">
                         {$article.created_at}
                     </span>

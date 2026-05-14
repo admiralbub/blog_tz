@@ -6,7 +6,43 @@
         heading="{$category.name}"
         text="{$category.description}"
     }
+     <!-- SORT -->
+    <div class="flex items-center justify-between mb-8">
 
+        <h2 class="text-3xl font-bold">
+            Articles
+        </h2>
+
+        <form method="GET">
+
+            <select
+                name="sort"
+                onchange="this.form.submit()"
+                class="bg-white border rounded-xl px-4 py-3 focus:outline-none"
+            >
+
+                <option
+                    value="date"
+                    {if $sort == 'date'}selected{/if}
+                >
+                    By publication date
+                </option>
+
+                <option
+                    value="views"
+                    {if $sort == 'views'}selected{/if}
+                >
+                    By views
+                </option>
+
+            </select>
+
+        </form>
+
+    </div>
+
+      
+    
     <!-- POSTS -->
     <div class="space-y-8">
 
@@ -17,14 +53,17 @@
                     {include file="components/article.tpl"
                         article=$article
                     }
-                 {/foreach}
-                
+                {/foreach}
+                    
 
             </div>
         {/if}
 
     </div>
-
-   
+    {include file="components/pagination.tpl"
+        heading="{$category.name}"
+        text="{$category.description}"
+    }
+  
 
 {/block}

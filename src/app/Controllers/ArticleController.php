@@ -13,6 +13,13 @@ class ArticleController extends Controller
         if(!$article) {
             View::error();
         }
+        $article['categories'] = $this->db()->getRelated(
+            'categories',
+            'article_category',
+            'category_id',
+            'article_id',
+            $article['id']
+        );
         $this->view('article', [
             'article'=>$article
         ]);

@@ -18,11 +18,7 @@
             </a>
             
 
-            <nav class="hidden md:flex items-center gap-6">
-                <a href="#" class="hover:text-blue-600">Главная</a>
-                <a href="#" class="hover:text-blue-600">Категории</a>
-                <a href="#" class="hover:text-blue-600">Контакты</a>
-            </nav>
+           
 
             
         </div>
@@ -33,7 +29,7 @@
     <!-- FOOTER -->
     <footer class="bg-white border-t mt-16">
         <div class="container mx-auto px-4 py-6 text-center text-gray-500">
-            © 2026 MyBlog. Все права защищены.
+            © 2026 MyBlog. All rights reserved.
         </div>
     </footer>
 </body>

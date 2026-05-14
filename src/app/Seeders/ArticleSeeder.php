@@ -28,8 +28,9 @@ class ArticleSeeder
                 'short_description' => $faker->sentence(12),
                 'content' => $faker->paragraphs(6, true),
                 'image' => 'https://picsum.photos/800/600?random=' . $i,
-                'views' => 0,
-                'created_at' => date('Y-m-d H:i:s')
+                'views' => mt_rand(0, 5000),
+                'created_at' => $faker->dateTimeBetween('-1 year', 'now')
+                    ->format('Y-m-d H:i:s')
             ]);
 
             shuffle($categories);
