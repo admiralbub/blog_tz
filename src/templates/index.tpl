@@ -7,8 +7,8 @@
 
 
 {include file="components/hero_section.tpl"
-    heading="Добро пожаловать в DevBlog"
-    text="Блог о современной веб-разработке."
+    heading="Welcome to the DevBlog"
+    text="A blog about modern web development."
 }
 
 
@@ -27,9 +27,9 @@
                 </p>
             </div>
 
-            <a href="#"
+            <a href="/category/{$category.id}"
                 class="bg-blue-600 text-white px-5 py-3 rounded-xl hover:bg-blue-700 transition">
-                Все статьи
+                All article
             </a>
         </div>
         

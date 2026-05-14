@@ -25,8 +25,6 @@ class HomeController extends Controller
         }
 
         $this->view('index', [
-            'title' => 'Главная страница',
-            'name' => 'Артем',
             'categories'=>$categories
         ]);
     }

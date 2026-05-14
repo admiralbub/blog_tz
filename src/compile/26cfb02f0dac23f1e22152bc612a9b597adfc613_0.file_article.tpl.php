@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.8.0, created on 2026-05-14 05:39:38
+/* Smarty version 5.8.0, created on 2026-05-14 05:48:17
   from 'file:article.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.8.0',
-  'unifunc' => 'content_6a05601ae654a2_61839927',
+  'unifunc' => 'content_6a056221a3d4d3_40282745',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '26cfb02f0dac23f1e22152bc612a9b597adfc613' => 
     array (
       0 => 'article.tpl',
-      1 => 1778737177,
+      1 => 1778737694,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,18 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a05601ae654a2_61839927 (\Smarty\Template $_smarty_tpl) {
+function content_6a056221a3d4d3_40282745 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, true);
-$_smarty_tpl->assign('meta_title', "Category", false, NULL);?>
+$_smarty_tpl->assign('meta_title', ((string)$_smarty_tpl->getValue('article')['title']), false, NULL);?>
 
 
 <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_919385536a05601ae63962_33499226', "content");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_4312809566a056221a3bc19_72969015', "content");
 $_smarty_tpl->getInheritance()->endChild($_smarty_tpl, "layouts/main.tpl", $_smarty_current_dir);
 }
 /* {block "content"} */
-class Block_919385536a05601ae63962_33499226 extends \Smarty\Runtime\Block
+class Block_4312809566a056221a3bc19_72969015 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates';

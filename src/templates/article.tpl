@@ -1,4 +1,4 @@
-{assign var="meta_title" value="Category"}
+{assign var="meta_title" value="{$article.title}"}
 {extends file="layouts/main.tpl"}
 
 {block name="content"}
