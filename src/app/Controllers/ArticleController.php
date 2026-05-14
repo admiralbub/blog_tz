@@ -4,24 +4,28 @@ namespace App\Controllers;
 use App\Kernel\Controller\Controller;
 use App\Kernel\Database\DatabaseInterface;
 use App\Kernel\View\View;
+use App\Repositories\Article\ArticleRepository;
+
 class ArticleController extends Controller
 {
-    public function show($id) {
-        $article = $this->db()->first('articles',[
-            "id"=>$id
-        ]);
-        if(!$article) {
-            View::error();
+ //   private ArticleRepository $articles;
+
+
+    public function show(int $id): void
+    {
+        $articles = new ArticleRepository($this->db());
+        $article = $articles->find($id);
+
+        if (!$article) {
+            abort(404);
         }
-        $article['categories'] = $this->db()->getRelated(
-            'categories',
-            'article_category',
-            'category_id',
-            'article_id',
-            $article['id']
-        );
+
+        $relatedArticles = $articles
+            ->getRelatedArticles($id);
+
         $this->view('article', [
-            'article'=>$article
+            'article' => $article,
+            'relatedArticles' => $relatedArticles,
         ]);
     }
 }

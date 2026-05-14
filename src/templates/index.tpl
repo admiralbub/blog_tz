@@ -1,6 +1,6 @@
 
 
-{assign var="meta_title" value="Главная"}
+{assign var="meta_title" value="Home"}
 {extends file="layouts/main.tpl"}
 
 {block name="content"}

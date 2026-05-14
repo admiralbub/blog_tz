@@ -1,3 +1,6 @@
+
+
+
 {assign var="meta_title" value="Category"}
 {extends file="layouts/main.tpl"}
 
@@ -48,6 +51,29 @@
 
         </article>
 
+
+         <!-- RELATED POSTS -->
+        <section class="max-w-5xl mx-auto mt-16">
+
+            <div class="flex items-center justify-between mb-8">
+
+                <h2 class="text-4xl font-bold">
+                    Related articles
+                </h2>
+
+            </div>
+            {if $relatedArticles}
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {foreach $relatedArticles as $article}
+                        {include file="components/related_article.tpl"
+                            article=$article
+                        }
+                     {/foreach}
+
+                    
+                </div>
+            {/if}
+        </section>
       
     </div>
      

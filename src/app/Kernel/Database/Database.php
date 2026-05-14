@@ -175,5 +175,6 @@ class Database implements DatabaseInterface {
 
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
+    
 }
 ?>

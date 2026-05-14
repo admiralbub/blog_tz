@@ -23,4 +23,5 @@ interface DatabaseInterface
         array $order = [],
         int $limit = -1
     ): array;
+   
 }

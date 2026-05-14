@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.8.0, created on 2026-05-14 05:43:02
+/* Smarty version 5.8.0, created on 2026-05-14 08:17:08
   from 'file:index.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.8.0',
-  'unifunc' => 'content_6a0560e68ba9e2_01750369',
+  'unifunc' => 'content_6a058504e70f79_76952295',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '94ad261647aa7bfeb6835379e098cb3d84cfcba3' => 
     array (
       0 => 'index.tpl',
-      1 => 1778737381,
+      1 => 1778746614,
       2 => 'file',
     ),
   ),
@@ -22,21 +22,21 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:components/article.tpl' => 1,
   ),
 ))) {
-function content_6a0560e68ba9e2_01750369 (\Smarty\Template $_smarty_tpl) {
+function content_6a058504e70f79_76952295 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, true);
 ?>
 
 
-<?php $_smarty_tpl->assign('meta_title', "Главная", false, NULL);?>
+<?php $_smarty_tpl->assign('meta_title', "Home", false, NULL);?>
 
 
 <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_16522207356a0560e68b3554_57330845', "content");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_18259527156a058504e6d3c6_98289475', "content");
 $_smarty_tpl->getInheritance()->endChild($_smarty_tpl, "layouts/main.tpl", $_smarty_current_dir);
 }
 /* {block "content"} */
-class Block_16522207356a0560e68b3554_57330845 extends \Smarty\Runtime\Block
+class Block_18259527156a058504e6d3c6_98289475 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates';

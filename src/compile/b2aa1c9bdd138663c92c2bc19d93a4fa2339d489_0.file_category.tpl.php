@@ -1,40 +1,41 @@
 <?php
-/* Smarty version 5.8.0, created on 2026-05-14 08:12:02
+/* Smarty version 5.8.0, created on 2026-05-14 08:19:21
   from 'file:category.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.8.0',
-  'unifunc' => 'content_6a0583d2b9d062_52586339',
+  'unifunc' => 'content_6a058589212740_90075985',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2aa1c9bdd138663c92c2bc19d93a4fa2339d489' => 
     array (
       0 => 'category.tpl',
-      1 => 1778746321,
+      1 => 1778746759,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:components/hero_section.tpl' => 1,
+    'file:components/sort.tpl' => 1,
     'file:components/article.tpl' => 1,
     'file:components/pagination.tpl' => 1,
   ),
 ))) {
-function content_6a0583d2b9d062_52586339 (\Smarty\Template $_smarty_tpl) {
+function content_6a058589212740_90075985 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, true);
-$_smarty_tpl->assign('meta_title', "Category", false, NULL);?>
+$_smarty_tpl->assign('meta_title', ((string)$_smarty_tpl->getValue('category')['name']), false, NULL);?>
 
 
 <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_15945441146a0583d2b98f15_83422782', "content");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_17047182266a05858920e617_53667913', "content");
 $_smarty_tpl->getInheritance()->endChild($_smarty_tpl, "layouts/main.tpl", $_smarty_current_dir);
 }
 /* {block "content"} */
-class Block_15945441146a0583d2b98f15_83422782 extends \Smarty\Runtime\Block
+class Block_17047182266a05858920e617_53667913 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates';
@@ -48,32 +49,9 @@ $_smarty_current_dir = '/var/www/html/templates';
         <h2 class="text-3xl font-bold">
             Articles
         </h2>
-
-        <form method="GET">
-
-            <select
-                name="sort"
-                onchange="this.form.submit()"
-                class="bg-white border rounded-xl px-4 py-3 focus:outline-none"
-            >
-
-                <option
-                    value="date"
-                    <?php if ($_smarty_tpl->getValue('sort') == 'date') {?>selected<?php }?>
-                >
-                    By publication date
-                </option>
-
-                <option
-                    value="views"
-                    <?php if ($_smarty_tpl->getValue('sort') == 'views') {?>selected<?php }?>
-                >
-                    By views
-                </option>
-
-            </select>
-
-        </form>
+        <?php $_smarty_tpl->renderSubTemplate("file:components/sort.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('sort'=>((string)$_smarty_tpl->getValue('sort'))), (int) 0, $_smarty_current_dir);
+?>
+       
 
     </div>
 
