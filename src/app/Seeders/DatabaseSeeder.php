@@ -12,10 +12,10 @@ class DatabaseSeeder {
 
 
         (new CategorySeeder($this->db))
-            ->run(5);
+            ->run(10);
 
         (new ArticleSeeder($this->db))
-            ->run(40);
+            ->run(100);
 
         echo PHP_EOL;
         echo "Database seeding completed!" . PHP_EOL;

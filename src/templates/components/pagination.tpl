@@ -1,33 +1,41 @@
 <!-- PAGINATION -->
-<div class="flex justify-center mt-12">
+<div class="flex gap-2 mt-10">
 
-    <div class="flex items-center gap-2">
+    {* Назад *}
+    {if $page > 1}
 
-        <a href="#"
-            class="bg-white border px-4 py-2 rounded-xl hover:bg-gray-100">
-            ←
+        <a
+            href="?page={$page-1}&sort={$sort}"
+            class="px-4 py-2 border rounded-xl"
+        >
+            Prev
         </a>
 
-        <a href="#"
-            class="bg-blue-600 text-white px-4 py-2 rounded-xl">
-            1
+    {/if}
+
+    {* Номера страниц *}
+    {for $i=1 to $totalPages}
+
+        <a
+            href="?page={$i}&sort={$sort}"
+            class="px-4 py-2 border rounded-xl
+            {if $i == $page} bg-blue-600 text-white {/if}"
+        >
+            {$i}
         </a>
 
-        <a href="#"
-            class="bg-white border px-4 py-2 rounded-xl hover:bg-gray-100">
-            2
+    {/for}
+
+    {* Вперед *}
+    {if $page < $totalPages}
+
+        <a
+            href="?page={$page+1}&sort={$sort}"
+            class="px-4 py-2 border rounded-xl"
+        >
+            Next
         </a>
 
-        <a href="#"
-            class="bg-white border px-4 py-2 rounded-xl hover:bg-gray-100">
-            3
-        </a>
-
-        <a href="#"
-            class="bg-white border px-4 py-2 rounded-xl hover:bg-gray-100">
-            →
-        </a>
-
-    </div>
+    {/if}
 
 </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.8.0, created on 2026-05-14 07:55:20
+/* Smarty version 5.8.0, created on 2026-05-14 08:12:02
   from 'file:category.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.8.0',
-  'unifunc' => 'content_6a057fe8087935_34696437',
+  'unifunc' => 'content_6a0583d2b9d062_52586339',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2aa1c9bdd138663c92c2bc19d93a4fa2339d489' => 
     array (
       0 => 'category.tpl',
-      1 => 1778745317,
+      1 => 1778746321,
       2 => 'file',
     ),
   ),
@@ -23,18 +23,18 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:components/pagination.tpl' => 1,
   ),
 ))) {
-function content_6a057fe8087935_34696437 (\Smarty\Template $_smarty_tpl) {
+function content_6a0583d2b9d062_52586339 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, true);
 $_smarty_tpl->assign('meta_title', "Category", false, NULL);?>
 
 
 <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_19938228946a057fe8080b95_45990212', "content");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_15945441146a0583d2b98f15_83422782', "content");
 $_smarty_tpl->getInheritance()->endChild($_smarty_tpl, "layouts/main.tpl", $_smarty_current_dir);
 }
 /* {block "content"} */
-class Block_19938228946a057fe8080b95_45990212 extends \Smarty\Runtime\Block
+class Block_15945441146a0583d2b98f15_83422782 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/templates';
@@ -102,7 +102,7 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
         <?php }?>
 
     </div>
-    <?php $_smarty_tpl->renderSubTemplate("file:components/pagination.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('heading'=>((string)$_smarty_tpl->getValue('category')['name']),'text'=>((string)$_smarty_tpl->getValue('category')['description'])), (int) 0, $_smarty_current_dir);
+    <?php $_smarty_tpl->renderSubTemplate("file:components/pagination.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('page'=>((string)$_smarty_tpl->getValue('page')),'totalPages'=>((string)$_smarty_tpl->getValue('totalPages'))), (int) 0, $_smarty_current_dir);
 ?>
   
 

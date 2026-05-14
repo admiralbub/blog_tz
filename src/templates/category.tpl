@@ -61,8 +61,8 @@
 
     </div>
     {include file="components/pagination.tpl"
-        heading="{$category.name}"
-        text="{$category.description}"
+        page="{$page}"
+        totalPages = "{$totalPages}"
     }
   
 
