@@ -52,8 +52,8 @@ class Router implements RouterInterface
             $route = trim($route, '/');
 
             $pattern = preg_replace(
-                '#\{[a-zA-Z_]+\}#',
-                '([^/]+)',
+                '#\{id\}#',
+                '([0-9]+)',
                 $route
             );
 

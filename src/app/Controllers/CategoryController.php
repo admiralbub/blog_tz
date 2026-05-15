@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Kernel\Controller\Controller;
 use App\Repositories\Category\CategoryRepository;
+use App\Kernel\View\View;
 class CategoryController extends Controller
 {
     public $limit = 6;
@@ -23,7 +24,7 @@ class CategoryController extends Controller
         $category = new CategoryRepository($this->db());
         $categoryFind = $category->find($id);
 
-
+        
         if(!$categoryFind) {
             View::error();
         }

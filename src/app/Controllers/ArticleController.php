@@ -13,11 +13,12 @@ class ArticleController extends Controller
 
     public function show(int $id): void
     {
+        
         $articles = new ArticleRepository($this->db());
         $article = $articles->find($id);
 
         if (!$article) {
-            abort(404);
+            View::error();
         }
 
         $relatedArticles = $articles
